@@ -9,6 +9,7 @@ echo "[INFO] Install base packages" && \
 echo "[INFO] Install python3 deps" && \
     pip3 install \
         pytest \
+        pytest-cov \
         plumbum \
         PyYAML
 

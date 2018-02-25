@@ -13,7 +13,11 @@ fi
 case ${1} in
     test:all)        
         echo "[INFO] Run all tests"
-        pytest
+        py.test
+        ;;
+    test:all:with-coverage)        
+        echo "[INFO] Run all tests with coverage report"
+        py.test --cov=src --cov-report term-missing --cov-config=.coveragerc
         ;;
     help)
         echo 'Available options:'
