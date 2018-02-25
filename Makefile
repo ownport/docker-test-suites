@@ -2,6 +2,10 @@
 build-image:
 	@ docker build -t ownport/test-suites:latest .
 
+push-image:
+	@ docker push ownport/test-suites:latest
+
+
 run-test-all:
 	@ docker run -ti --rm --name test-suites ownport/test-suites:latest test:all
 
