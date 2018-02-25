@@ -7,7 +7,7 @@ if [ -e apk-requirements.txt ]; then
 fi
 
 if [ -e py3-requirements.txt ]; then
-	pip2 install -r py3-requirements.txt
+	pip3 install -r py3-requirements.txt
 fi
 
 case ${1} in
@@ -21,9 +21,10 @@ case ${1} in
         ;;
     help)
         echo 'Available options:'
-        echo ' test:all     - Run all tests'
-        echo ' help         - Displays the help'
-        echo ' [command]    - Execute the specified command, eg. bash.'
+        echo ' test:all                     - Run all tests'
+        echo ' test:all:with-coverage       - Run all tests with coverage report'
+        echo ' help                         - Displays the help'
+        echo ' [command]                    - Execute the specified command, eg. bash.'
         ;;
     *)
         exec "$@"
