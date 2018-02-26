@@ -1,16 +1,15 @@
 
-build-image:
-	@ docker build -t ownport/test-suites:latest .
+build-base-image:
+	@ docker build -t ownport/test-suites:latest -f base/Dockerfile base/
 
-push-image:
+push-base-image:
 	@ docker push ownport/test-suites:latest
 
+build-data-formats-image:
+	@ docker build -t ownport/test-suites-data-formats:latest -f data-formats/Dockerfile data-formats
 
-run-test-all:
-	@ docker run -ti --rm --name test-suites ownport/test-suites:latest test:all
-
-run-test-all-with-coverage:
-	@ docker run -ti --rm --name test-suites ownport/test-suites:latest test:all:with-coverage
+push-data-formats-image:
+	@ docker push ownport/test-suites-data-formats:latest
 
 
 

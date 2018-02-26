@@ -1,8 +1,10 @@
 # docker-test-suites
 
-Docker image for executing test cases based on pytest framework 
+Docker images for executing test cases based on pytest framework 
 
-# Versions
+## Base image
+
+### Versions
 | package 	    | version
 | ------------- | ---------
 | pytest 	    | 3.4.1
@@ -10,15 +12,44 @@ Docker image for executing test cases based on pytest framework
 | plumbum   	| 1.6.6
 | PyYAML    	| 3.12
 
-## How to build image
+
+### How to build image
 ```sh
-$ make build
+$ make build-base-image
 ```
 
-## How to get docker image
+### How to get docker image
 ``` sh
 $ docker pull ownport/test-suites:latest
 ```
+
+
+## Data formats image
+
+### Versions
+| package 	            | version
+| --------------------- | ---------
+| pythoon-snappy        | 0.5.2
+| avro-python3          | 1.8.2
+| cffi                  | 1.11.4
+
+### How to build image
+```sh
+$ make build-data-formats-image
+```
+
+### How to build image
+
+```sh
+$ make build-data-formats-image
+```
+
+### How to get docker image
+``` sh
+$ docker pull ownport/test-suites-data-formats:latest
+```
+
+
 
 ## Supported commands
 
