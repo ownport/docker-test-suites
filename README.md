@@ -32,6 +32,7 @@ $ docker pull ownport/test-suites:latest
 | pythoon-snappy        | 0.5.2
 | avro-python3          | 1.8.2
 | cffi                  | 1.11.4
+| protobuf              | 3.5.1
 
 ### How to build image
 ```sh
