@@ -15,10 +15,12 @@ echo "[INFO] Install build deps packages" && \
 
 echo "[INFO] Install data formats packages" && \
     pip3 install \
+        cython==0.28 \
         python-snappy==0.5.2 \
         avro-python3==1.8.2 \
+        fastavro==0.17.9 \
         cffi==1.11.4 \
-        protobuf==3.5.1
+        protobuf==3.5.1 
 
 echo "[INFO] Remove build deps and clear temp files" && \
     apk del .build-deps && \
