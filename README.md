@@ -29,8 +29,10 @@ $ docker pull ownport/test-suites:latest
 ### Versions
 | package 	            | version
 | --------------------- | ---------
-| pythoon-snappy        | 0.5.2
+| cython                | 0.28
+| python-snappy         | 0.5.2
 | avro-python3          | 1.8.2
+| fastavro              | 1.17.9
 | cffi                  | 1.11.4
 | protobuf              | 3.5.1
 
